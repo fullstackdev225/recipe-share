@@ -18,6 +18,8 @@
 
                    <h1 class="text-center">Connexion</h1><br><br>
 
+                   <?php userLogged(); ?>
+
                    <form method="POST" class="form row gy-4">
                         <div class="col-12">
                             <label for="username" class="form-label">Nom d'utilisateur</label>
@@ -30,7 +32,7 @@
                         </div>
 
                         <div class="col-12 text-center">
-                            <button type="submit" name="btn-sign" id="btn-sign" class="btn btn-warning text-light">Connexion</button>
+                            <button type="submit" name="btn-login" id="btn-login" class="btn btn-warning text-light">Connexion</button>
                             <div class="form-text">Pas encore inscrit? <a href="signup.php">Inscrivez-vous</a></div>
                         </div>
                    </form>
@@ -41,5 +43,7 @@
                 </div>
             </div>
         </div>
+
+        <script src="../../sass/vendors/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

@@ -18,7 +18,9 @@
 
                    <h1 class="text-center">Inscription</h1><br><br>
 
-                   <form method="POST" class="form row gy-4">
+                   <?php userSigned(); ?>
+
+                   <form method="POST" class="form row mt-4 gy-4">
                         <div class="col-md-6">
                             <label for="user-lastname" class="form-label">Nom</label>
                             <input type="text" name="user-lastname" id="user-lastname" required class="form-control">
@@ -61,5 +63,7 @@
                 </div>
             </div>
         </div>
+
+        <script src="../../sass/vendors/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
