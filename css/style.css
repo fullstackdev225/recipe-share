@@ -1,0 +1,28 @@
+.img-back .carousel-caption{
+    font-size: 7em;
+    color: rgb(20, 134, 179);
+    font-weight: bold;
+}
+
+.navbar .active{
+    border: 2px solid skyblue;
+    background-color: skyblue;
+}
+
+.form-add .form-section .form-control{
+    width: 700px;
+}
+
+.form-add .form .form-section{
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form .form .form-section{
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form .form-section .form-control{
+    width: 800px;
+}
