@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php if(isset($_SESSION["username"])) : ?>
+    <!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
@@ -22,7 +23,7 @@
                           <li class="nav-item"><a href="contact.php" class="nav-link text-light">Contact</a></li>
                           <li class="nav-item">
                               <a href="#" class="nav-link">
-                                   <img src="../../images/user.png" alt="">
+                                   <img src="../../images/user.png" alt="" title="<?php echo $_SESSION["username"]; ?>">
                               </a>
                            </li>
                        </ul>
@@ -75,3 +76,4 @@
          </main>
     </body>
 </html>
+<?php endif; ?>

@@ -19,6 +19,8 @@
                      <h1 class="text-center">Inscription</h1>
                      <p class="text-secondary text-center">Inscrivez-vous dès maintenant</p><br><br>
 
+                     <?php userSignup(); ?>
+
                      <form method="POST" class="form row gy-4">
                          <div class="col-md-6">
                             <label for="user-lastname" class="form-label">Nom</label>
@@ -62,5 +64,7 @@
                 </div>
             </div>
         </div>
+
+        <script src="../../sass/vendors/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
