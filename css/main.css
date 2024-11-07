@@ -11849,4 +11849,24 @@ body {
   font-family: "Poppins";
 }
 
+header .navbar .navbar-nav .nav-item .link-active {
+  border: 2px solid rgb(35, 156, 204);
+  background-color: rgb(35, 156, 204);
+}
+
+.add-recipe-form .form__section {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form .form__section {
+  display: flex;
+  justify-content: center;
+}
+
+.section-background .carousel-caption {
+  font-size: 5.5em;
+  text-shadow: 2Px 2px 2px yellow;
+}
+
 /*# sourceMappingURL=main.css.map */
