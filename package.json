@@ -1,0 +1,14 @@
+{
+  "name": "recipe-share",
+  "version": "1.0.0",
+  "description": "App of recipe share",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/main.css"
+  },
+  "author": "Digital Services",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
