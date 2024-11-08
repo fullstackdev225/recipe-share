@@ -143,3 +143,16 @@ function add_recipe(string $title, string $description, string $author, string $
                                     VALUES (?, ?, ?, ?, ?)');
     $request->execute([$title, $description, $author, $image_url, $id]);
 }
+
+
+function get_recipe(int $user_id){
+    //we connect to database...
+    $database = db_connect();
+
+    //we getting recipes...
+    $request = $database->prepare('SELECT recipe_title, recipe_description, recipe_author, recipe_image FROM recipes WHERE user_id = ?');
+    $request->execute([$user_id]);
+    $result = $request->fetchAll();
+
+    return $result;
+}

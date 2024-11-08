@@ -47,7 +47,22 @@
 
             <section class="recipes-lists">
                 <div class="container">
-                    <h1 class="text-center">Mes recettes</h1>
+                    <h1 class="text-center">Mes recettes</h1><br>
+
+                   <div class="row gy-4">
+                             <?php foreach($recipes as $recipe) : ?>
+                            <div class="col-md-3">
+                                <div class="card">
+                                    <img src="<?php echo $recipe["recipe_image"]; ?>" alt="" style="height: 200px;" class="img card-top">
+                                    <div class="card-body">
+                                        <h3 class="card-title"><?php echo $recipe["recipe_title"]; ?></h3>
+                                        <h5 class="card-subtitle"><?php echo $recipe["recipe_author"]; ?></h5>
+                                        <p class="card-text"><?php echo $recipe["recipe_description"]; ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                          <?php endforeach; ?>
+                   </div>
                 </div>
             </section>
          </main>

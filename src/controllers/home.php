@@ -11,6 +11,10 @@ require_once('../model.php');
             $user_password = $_POST["user-password"];
 
             authentification($username, $user_password);
-       }
+       } 
+
+    $user_id = get_id($_SESSION["username"]);
+
+    $recipes = get_recipe($user_id);
 
 require_once('../../templates/home.php');

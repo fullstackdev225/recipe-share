@@ -13,7 +13,6 @@ require_once('../model.php');
             authentification($username, $user_password);
        }
 
-  
     
     function recipe(){
         if(isset($_POST["btn-add"])){
@@ -21,14 +20,16 @@ require_once('../model.php');
             $recipe_description = $_POST["recipe-description"];
             $recipe_author = $_POST["recipe-author"];
             $recipe_image = $_POST["recipe-image"];
-
-            add_recipe($recipe_title, $recipe_description, $recipe_author, $recipe_image, get_id($_SESSION["username"]));
-
+            $user_id = get_id($_SESSION["username"]);
+    
+            add_recipe($recipe_title, $recipe_description, $recipe_author, $recipe_image, $user_id);
+    
             echo '<div class="alert alert-success alert-dismissible">
-                       Votre recette a été ajouté avec succès !
-                       <button class="btn-close" data-bs-dismiss="alert"></button>
-                 </div>';
-        }
+                        Votre recette a été ajouté avec succès
+                        <button class="btn-close" data-bs-dismiss="alert"></button>
+                  </div>';
+        } 
     }
+
 
 require_once('../../templates/add-recipe.php');
