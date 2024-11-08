@@ -36,6 +36,8 @@
                  <div class="container">
                      <h1 class="text-center">Ajouter une recette</h1><br>
 
+                     <?php recipe(); ?>
+
                  <form method="POST" class="form">
                     <div class="form__section">
                         <div class="col-7">
@@ -47,7 +49,7 @@
                     <div class="form__section">
                         <div class="col-7">
                             <label for="recipe-description" class="form-label">Description</label>
-                            <textarea name="recipe-description" id="recipe-description" required placeholder="Décrivez votre recette (ingrédients, temps de cuisson etc.)" cols="30" rows="10" class="form-control"></textarea>
+                            <textarea name="recipe-description" id="recipe-description" minlength="10" required placeholder="Décrivez votre recette (ingrédients, temps de cuisson etc.)" cols="30" rows="10" class="form-control"></textarea>
                         </div>
                     </div><br>
 
@@ -60,8 +62,8 @@
 
                     <div class="form__section">
                          <div class="col-7">
-                            <label for="recipe-image" class="form-label">Image</label>
-                            <input type="file" name="recipe-image" id="recipe-image" required class="form-control">
+                            <label for="recipe-image" class="form-label">Url de l'image</label>
+                            <input type="url" placeholder="http://..." name="recipe-image" id="recipe-image" required class="form-control">
                          </div>
                     </div><br>
 
@@ -74,6 +76,8 @@
                  </div>
             </section>
          </main>
+
+         <script src="../../sass/vendors/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
 <?php endif; ?>

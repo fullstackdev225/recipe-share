@@ -119,3 +119,27 @@ function authentification(string $username, string $password){
           }
      }
 }
+
+
+function get_id(string $username){
+    //we connect to database...
+    $database = db_connect();
+
+    //we getting user id...
+    $request = $database->prepare('SELECT user_id FROM users WHERE username = ?');
+    $request->execute([$username]);
+    $result = $request->fetch();
+
+    return $result["user_id"];
+}
+
+
+function add_recipe(string $title, string $description, string $author, string $image_url, int $id){
+     //we connect to database...
+     $database = db_connect();
+
+     //we add recipe in the database...
+     $request = $database->prepare('INSERT INTO recipes(recipe_title, recipe_description, recipe_author, recipe_image, user_id) 
+                                    VALUES (?, ?, ?, ?, ?)');
+    $request->execute([$title, $description, $author, $image_url, $id]);
+}
