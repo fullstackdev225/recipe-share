@@ -1,0 +1,14 @@
+{
+  "name": "recipe-share",
+  "version": "1.0.0",
+  "description": "App of recipe share",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Charles Potey",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
