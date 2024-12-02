@@ -1,0 +1,21 @@
+/* header style */
+header .nav-link--active{
+    border: 2px solid rgb(23, 157, 210);
+    background-color: rgb(23, 157, 210);
+}
+
+/* main content style */
+.img-section .carousel-caption{
+    font-size: 6em;
+    text-shadow: 2px 2px 2px rgb(23, 157, 210);
+}
+
+.add-recipe .form .form-section{
+    display: flex;
+    justify-content: center;
+}
+
+.contact-section .form .form-section{
+    display: flex;
+    justify-content: center;
+}
