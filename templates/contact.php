@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php if(isset($_SESSION["username"])) : ?>
+    <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -23,6 +24,7 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="../../icons/user.png" width="32" alt="">
+                            <span class="text-light">Bonjour <?php echo $_SESSION["username"]; ?></span>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="#" class="dropdown-item">Profile</a></li>
@@ -72,3 +74,4 @@
     <script src="../../sass/vendors/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+<?php endif; ?>
