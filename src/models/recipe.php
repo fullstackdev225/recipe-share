@@ -29,9 +29,41 @@ function getRecipe(int $userId){
      $database = dbConnect();
 
      //we getting user recipes...
-     $request = $database->prepare('SELECT title, details, author, img FROM recipes WHERE user_id = ?');
+     $request = $database->prepare('SELECT id, title, details, author, img FROM recipes WHERE user_id = ?');
      $request->execute([$userId]);
      $result = $request->fetchAll();
 
      return $result;
+}
+
+
+function updateRecipe(string $title, string $description, string $author, string $image, int $id){
+    //we connect to database...
+    $database = dbConnect();
+
+    //we modifiy recipe...
+    $request = $database->prepare('UPDATE recipes SET title = ?, details = ?, author = ?, img = ? WHERE id = ?');
+    $request->execute([$title, $description, $author, $image, $id]);
+}
+
+
+function getRecipes(int $recipeId){
+     //we connect to database...
+     $database = dbConnect();
+
+     //we getting recipes...
+     $request = $database->prepare("SELECT title, details, author, img FROM recipes WHERE id = ?");
+     $request->execute([$recipeId]);
+     $result = $request->fetchAll();
+
+     return $result;
+}
+
+function deleteRecipe(int $recipeId){
+     //we connect to database...
+     $database = dbConnect();
+
+     //we delete recipe...
+     $request = $database->prepare('DELETE FROM recipes WHERE id = ?');
+     $request->execute([$recipeId]);
 }

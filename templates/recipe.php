@@ -20,8 +20,8 @@
                                 <h3 class="card-title"><?php echo $recipe["title"]; ?></h3>
                                 <h6 class="card-subtitle"><?php echo $recipe["author"]; ?></h6>
                                 <p class="card-text"><?php echo $recipe["details"]; ?></p>
-                                <a href="#" class="btn btn-primary">Modifier</a>
-                                <a href="#" class="btn btn-danger">Supprimer</a>
+                                <a href="update_recipe.php?recipe-id=<?php echo $recipe["id"]; ?>" class="btn btn-primary">Modifier</a>
+                                <a href="delete_recipe.php?recipe-id=<?php echo $recipe["id"]; ?>" class="btn btn-danger">Supprimer</a>
                             </div>
                         </div>
                     </div>
