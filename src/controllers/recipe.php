@@ -6,6 +6,7 @@ session_start();
 
 require_once('../models/login.php');
 require_once('../models/recipe.php');
+require_once('../models/user.php');
 
     if(isset($_POST["btn-login"])){
         $username = $_POST["username"];
@@ -14,6 +15,7 @@ require_once('../models/recipe.php');
         authSession($username, $password);
     }
 
-    $recipes = getAllRecipe();
+    $userId = getUserId($_SESSION["username"]);
+    $recipes = getRecipe($userId);
 
-require_once('../../templates/home.php');
+require_once('../../templates/recipe.php');

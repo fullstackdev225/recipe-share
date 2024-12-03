@@ -27,8 +27,8 @@
                             <span class="text-light">Bonjour <?php echo $_SESSION["username"]; ?></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#" class="dropdown-item">Profile</a></li>
-                            <li><a href="#" class="dropdown-item">Mes recettes</a></li>
+                            <li><a href="profil.php" class="dropdown-item">Profile</a></li>
+                            <li><a href="recipe.php" class="dropdown-item">Mes recettes</a></li>
                             <li><a href="#" class="dropdown-item">Deconnexion</a></li>
                         </ul>
                     </li>
@@ -50,7 +50,23 @@
         </section><br><br>
 
         <section class="recipes-lists">
-             <h1 class="text-center">Les recettes</h1>
+             <h1 class="text-center">Les recettes</h1><br>
+
+             <div class="row">
+                <?php foreach($recipes as $recipe) : ?>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="<?php echo $recipe["img"]; ?>" alt="" height="200" class="img-card-top">
+                            <div class="card-body">
+                                <h3 class="card-title"><?php echo $recipe["title"]; ?></h3>
+                                <h6 class="card-subtitle"><?php echo $recipe["author"]; ?></h6>
+                                <p class="card-text"><?php echo $recipe["details"]; ?></p>
+                                <a href="#" class="btn btn-primary">Commentaires</a>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+             </div>
         </section>
     </main><br><br>
 

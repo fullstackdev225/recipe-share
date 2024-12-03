@@ -27,8 +27,8 @@
                             <span class="text-light">Bonjour <?php echo $_SESSION["username"]; ?></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#" class="dropdown-item">Profile</a></li>
-                            <li><a href="#" class="dropdown-item">Mes recettes</a></li>
+                            <li><a href="profil.php" class="dropdown-item">Profile</a></li>
+                            <li><a href="recipe.php" class="dropdown-item">Mes recettes</a></li>
                             <li><a href="#" class="dropdown-item">Deconnexion</a></li>
                         </ul>
                     </li>
