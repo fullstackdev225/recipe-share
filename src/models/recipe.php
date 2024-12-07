@@ -16,7 +16,7 @@ function getAllRecipe(){
      $database = dbConnect();
 
      //we getting recipes...
-     $request = $database->prepare('SELECT title, details, author, img FROM recipes');
+     $request = $database->prepare('SELECT title, author, img FROM recipes');
      $request->execute();
      $result = $request->fetchAll();
 

@@ -14,6 +14,7 @@ require_once('../models/recipe.php');
         authSession($username, $password);
     }
 
+    //we display all recipes...
     $recipes = getAllRecipe();
 
 require_once('../../templates/home.php');

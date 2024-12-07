@@ -18,8 +18,7 @@
                             <img src="<?php echo $recipe["img"]; ?>" alt="" height="200" class="img-card-top">
                             <div class="card-body">
                                 <h3 class="card-title"><?php echo $recipe["title"]; ?></h3>
-                                <h6 class="card-subtitle"><?php echo $recipe["author"]; ?></h6>
-                                <p class="card-text"><?php echo $recipe["details"]; ?></p>
+                                <p class="card-text"> Auteur: <?php echo $recipe["author"]; ?></p>
                                 <a href="update_recipe.php?recipe-id=<?php echo $recipe["id"]; ?>" class="btn btn-primary">Modifier</a>
                                 <a href="delete_recipe.php?recipe-id=<?php echo $recipe["id"]; ?>" class="btn btn-danger">Supprimer</a>
                             </div>

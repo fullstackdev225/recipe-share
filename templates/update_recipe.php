@@ -57,7 +57,9 @@
                     <div class="form-section">
                         <div class="col-7">
                             <label for="description" class="form-label">Description</label>
-                            <textarea name="description" id="description" value="<?php echo $recipe["details"]; ?>" required placeholder="Décrivez la recette (ingrédients, temps de cuisson etc.)" cols="30" rows="10" class="form-control"></textarea>
+                            <textarea name="description" id="description" required placeholder="Décrivez la recette (ingrédients, temps de cuisson etc.)" cols="30" rows="10" class="form-control">
+                                <?php echo $recipe["details"]; ?>
+                            </textarea>
                         </div>
                     </div><br>
 
