@@ -16,7 +16,7 @@ function getAllRecipe(){
      $database = dbConnect();
 
      //we getting recipes...
-     $request = $database->prepare('SELECT title, author, img FROM recipes');
+     $request = $database->prepare('SELECT id, title, author, img FROM recipes');
      $request->execute();
      $result = $request->fetchAll();
 
@@ -29,7 +29,7 @@ function getRecipe(int $userId){
      $database = dbConnect();
 
      //we getting user recipes...
-     $request = $database->prepare('SELECT id, title, details, author, img FROM recipes WHERE user_id = ?');
+     $request = $database->prepare('SELECT id, title, author, img FROM recipes WHERE user_id = ?');
      $request->execute([$userId]);
      $result = $request->fetchAll();
 

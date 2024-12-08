@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RecipeShare - Accueil</title>
+    <title>RecipeShare - Rédiger votre commentaire</title>
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="shortcut icon" href="../../icons/recipe-share-icon.png" type="image/x-icon">
@@ -18,7 +18,7 @@
                 </a>
 
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="home.php" class="nav-link nav-link--active text-light">Accueil</a></li>
+                    <li class="nav-item"><a href="home.php" class="nav-link text-light">Accueil</a></li>
                     <li class="nav-item"><a href="create_recipe.php" class="nav-link text-light">Ajouter recette</a></li>
                     <li class="nav-item"><a href="contact.php" class="nav-link text-light">Contact</a></li>
                     <li class="nav-item dropdown">
@@ -35,34 +35,25 @@
                 </ul>
             </div>
          </nav>
-    </header>
+    </header><br><br>
 
     <main>
-        <section class="img-section">
-             <div class="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../../images/img-background.jpg" alt="" height="500" class="d-block w-100">
-                        <div class="carousel-caption text-primary fw-bold">le meilleur endroit pour partager vos recettes</div>
-                    </div>
-                </div>
-             </div>
-        </section><br><br>
-
-        <section class="recipes-lists">
+        <section class="form-comment">
             <div class="container">
-                 <h1 class="text-center">Les recettes</h1><br>
+                <h1>Rédiger un commentaire</h1><br><br>
 
-             <div class="row">
-                <?php foreach($recipes as $recipe) : ?>
-                    <div class="col-md-3 border-white bg-white m-3 p-3 shadow">
-                        <img src="<?php echo $recipe["img"]; ?>" width="200" height="200" alt="">
-                        <h2><?php echo $recipe["title"]; ?></h2>
-                        <p>Auteur: <?php echo $recipe["author"]; ?></p>
-                        <a href="comment.php?recipe-id=<?= $recipe["id"]; ?>" class="btn btn-primary">Commenter</a><br><br>
-                    </div>
-                <?php endforeach; ?>
-             </div>
+                <?php inserComment(); ?>
+                
+                <form method="POST" class="row gy-4">
+                     <div class="col-md-7">
+                        <label for="user-comment" class="form-labe">Votre commentaire</label>
+                        <textarea name="user-comment" id="user-comment" minlength="10" required cols="30" rows="10" class="form-control"></textarea>
+                     </div>
+
+                     <div class="col-md-7">
+                         <button type="submit" name="btn-comment" id="btn-comment" class="btn btn-primary">Envoyer</button>
+                     </div>
+                </form>
             </div>
         </section>
     </main><br><br>
