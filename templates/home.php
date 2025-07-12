@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php if(isset($_SESSION["username"])) : ?>
+    <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -23,8 +24,9 @@
                 </ul>
 
                 <div class="dropdown">
-                    <a href="#" data-bs-toggle="dropdown" class="dropdown-toggle" role="button">
+                    <a href="#" data-bs-toggle="dropdown" class="dropdown-toggle text-secondary text-decoration-none" role="button">
                         <i class="fa-solid fa-circle-user fs-3 text-secondary"></i>
+                        <span><?php echo $_SESSION["username"] ?></span>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a href="#" class="dropdown-item">Profile</a></li>
@@ -49,3 +51,4 @@
     <script src="../../sass/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+<?php endif; ?>

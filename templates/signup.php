@@ -16,6 +16,9 @@
                 </div>
                 <h1 class="text-center">Inscription</h1>
                 <p class="text-secondary text-center">Inscrivez-vous dès maintenant</p>
+
+                <?php userSigned(); ?>
+
                 <form method="POST" class="row gy-4 mt-4">
                     <div class="col-md-6">
                         <input type="text" name="last-name" id="last-name" class="form-control" placeholder="Nom" required>
@@ -42,7 +45,7 @@
                     </div>
 
                     <div class="col-12 text-center">
-                        <button type="submit" class="btn btn-primary">Inscription</button>
+                        <button type="submit" name="btn-signup" class="btn btn-primary">Inscription</button>
                         <div class="form-text">Déja inscrit? <a href="login.php">Connexion</a></div>
                     </div>
                 </form>
@@ -53,5 +56,7 @@
             </div>
         </div>
     </div>
+
+    <script src="../../sass/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
