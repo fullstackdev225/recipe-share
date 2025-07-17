@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter des recettes</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="icons/recipe-share.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/4974ed612a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+         <nav class="navbar navbar-expand-md bg-dark">
+            <div class="container">
+                <a href="userInterface.html" class="navbar-brand">
+                    <img src="icons/recipe-share.png" width="100" alt="logo de l'application">
+                </a>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="userInterface.html" class="nav-link text-light">Accueil</a></li>
+                    <li class="nav-item"><a href="addRecipe.html" class="nav-link active text-light">Ajouter une recette</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-light">Contact</a></li>
+                     <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-circle-user fs-3 text-primary"></i>
+                            <span class="username"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+         </nav>
+    </header><br><br>
+
+    <main>
+        <section class="section-add">
+           <div class="container">
+                 <h1 class="text-center">Ajouter une recette</h1>
+            <form class="mt-5 form">
+                 <div class="form-row">
+                    <div class="form-col">
+                        <label for="recipe-title" class="form-label">Titre</label><br>
+                        <input type="text" name="recipe-title" id="recipe-title" required class="form-control">
+                    </div>
+                 </div><br>
+
+                 <div class="form-row">
+                    <div class="form-col">
+                        <label for="recipe-description" class="form-label">Description</label><br>
+                        <textarea name="recipe-description" id="recipe-description" minlength="12" placeholder="Au moins 12 caractères" required cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+                 </div><br>
+
+                 <div class="form-row">
+                    <div class="form-col">
+                        <label for="recipe-author" class="form-label">Auteur</label><br>
+                        <input type="text" name="recipe-author" id="recipe-author" required class="form-control">
+                    </div>
+                 </div><br>
+
+                 <div class="form-row">
+                     <div class="form-col">
+                        <label for="recipe-image" class="form-label">URL de l'image</label><br>
+                        <input type="url" name="recipe-image" id="recipe-image" required placeholder="http://..." class="form-control">
+                     </div>
+                 </div><br>
+
+                 <div class="form-row">
+                    <div class="form-col">
+                        <button type="submit" class="btn btn-info text-light">Ajouter</button>
+                    </div>
+                 </div>
+            </form>
+           </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

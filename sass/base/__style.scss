@@ -7,3 +7,35 @@ body{
 .title{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+header{
+        .active{
+            border: 2px solid rgb(12, 144, 196);
+            background-color: rgb(12, 144, 196);
+        }
+}
+
+section{
+    .carousel-caption{
+        font-size: 6em;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: rgb(12, 144, 196);
+        text-shadow: 0px 0px 2px rgb(12, 144, 196);
+        font-weight: bold;
+    }
+}
+
+.section-add{
+    .form{
+        &-row{
+            display: flex;
+            justify-content: center;
+
+            .form-col{
+                .form-control{
+                    width: 500px;
+                }
+            }
+        }
+    }
+}
